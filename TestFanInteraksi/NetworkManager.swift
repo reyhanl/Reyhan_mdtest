@@ -143,7 +143,7 @@ class NetworkManager: NetworkManagerProtocol{
             completion(nil)
         }
     }
-
+    
     
     func updateUserData(profile: UserProfileModel, completion: @escaping(Error?) -> Void) {
         guard let id = profile.id else{return}
@@ -176,6 +176,11 @@ class NetworkManager: NetworkManagerProtocol{
         }
     }
     
+    func sendVerificationEmail(email: String, completion: @escaping(Error?) -> Void){
+        Auth.auth().currentUser?.sendEmailVerification(completion: { error in
+            completion(error)
+        })
+    }
 }
                                             
                                             

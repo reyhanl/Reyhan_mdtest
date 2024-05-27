@@ -16,7 +16,7 @@ protocol AuthPresenterToViewProtocol{
 protocol AuthViewToPresenterProtocol{
     var view: AuthPresenterToViewProtocol? {get set}
     var router: AuthPresenterToRouterProtocol? {get set}
-    func register(email: String, password: String)
+    func register(name: String, email: String, password: String)
     func signIn(email: String, password: String)
     func goToSignIn(from vc: UIViewController)
     func goToSignUp(from vc: UIViewController)
@@ -26,7 +26,7 @@ protocol AuthViewToPresenterProtocol{
 
 protocol AuthPresenterToInteractorProtocol{
     var presenter: AuthInteractorToPresenterProtocol? {get set}
-    func register(email: String, password: String)
+    func register(name: String, email: String, password: String)
     func signIn(email: String, password: String)
     func saveToken(token: String)
 //    func purchase(motorcycle: Register)
@@ -48,6 +48,7 @@ protocol AuthPresenterToRouterProtocol{
 enum AuthSuccessType{
     case successfullyRegister(String)
     case successfullySignIn(String)
+    case successfullySentEmailVerification
 }
 
 enum AuthType{

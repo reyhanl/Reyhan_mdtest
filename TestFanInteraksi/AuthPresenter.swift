@@ -13,8 +13,8 @@ class AuthPresenter: AuthViewToPresenterProtocol{
     var interactor: AuthPresenterToInteractorProtocol?
     var router: AuthPresenterToRouterProtocol?
     
-    func register(email: String, password: String) {
-        interactor?.register(email: email, password: password)
+    func register(name: String, email: String, password: String) {
+        interactor?.register(name: name, email: email, password: password)
     }
     
     func signIn(email: String, password: String) {
@@ -50,6 +50,8 @@ extension AuthPresenter: AuthInteractorToPresenterProtocol{
         switch type {
         case .successfullyRegister(let refreshToken), .successfullySignIn(let refreshToken):
             interactor?.saveToken(token: refreshToken)
+        case .successfullySentEmailVerification:
+            view?.presentBubbleAlert(text: "We've sent you a verification email", with: 0.3, floatingDuration: 1)
         }
         //Scene delegate / AuthListener will automatically get user to HomeVC
     }
@@ -61,7 +63,7 @@ extension AuthPresenter: AuthInteractorToPresenterProtocol{
                 view?.presentBubbleAlert(text: localizedDescription, with: 0.5, floatingDuration: 1)
                 break
             default:
-                break
+                print("error: \(error.localizedDescription)")
             }
         }
     }

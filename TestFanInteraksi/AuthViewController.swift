@@ -26,6 +26,18 @@ class AuthViewController: UIViewController{
         return stackView
     }()
     
+    lazy var nameTextField: CustomTextField = {
+        let textField = CustomTextField(frame: .zero)
+        textField.translatesAutoresizingMaskIntoConstraints = false
+        textField.placeholder = "Name"
+        textField.layer.cornerRadius = 5
+        textField.backgroundColor = .systemFill
+        textField.delegate = self
+        textField.validation = [.minimumNumberOfLetter(6)]
+        textField.shouldValidate = true
+        textField.addTarget(target: self, selector: #selector(textDidChange(_:)), for: .editingChanged)
+        return textField
+    }()
     lazy var emailTextField: CustomTextField = {
         let textField = CustomTextField(frame: .zero)
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -92,7 +104,7 @@ class AuthViewController: UIViewController{
         button.addTarget(self, action: #selector(goToSignIn), for: .touchUpInside)
         button.layer.cornerRadius = 5
         button.backgroundColor = .clear
-        button.setTitle("Already have an account?", for: .normal)
+        button.setTitle("Forgot password", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 14)
         button.addTarget(self, action: #selector(forgotPassword), for: .touchUpInside)
         return button
@@ -110,6 +122,7 @@ class AuthViewController: UIViewController{
         view.backgroundColor = .systemBackground
         addContainer()
         addStackView()
+        addNameTextField()
         addEmailTextField()
         addPasswordTextField()
         addConfirmationPasswordTextField()
@@ -152,6 +165,7 @@ class AuthViewController: UIViewController{
         passwordTextField.shouldValidate = true
         confirmationPasswordTextField.shouldValidate = true
         alreadyHaveAnAccountButton.setTitle("Already have an account? Sign in", for: .normal)
+        forgotPasswordButton.isHidden = true
         button.setTitle("Sign up", for: .normal)
     }
     
@@ -178,6 +192,12 @@ class AuthViewController: UIViewController{
             NSLayoutConstraint(item: textFieldStackView, attribute: .trailing, relatedBy: .equal, toItem: containerView, attribute: .trailing, multiplier: 1, constant: -20),
             NSLayoutConstraint(item: textFieldStackView, attribute: .bottom, relatedBy: .lessThanOrEqual, toItem: containerView, attribute: .bottom, multiplier: 1, constant: -20)
         ])
+    }
+    
+    private func addNameTextField(){
+        textFieldStackView.addArrangedSubview(nameTextField)
+        nameTextField.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8).isActive = true
+        nameTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     private func addEmailTextField(){
@@ -213,24 +233,25 @@ class AuthViewController: UIViewController{
     private func addForgotPasswordButton(){
         textFieldStackView.addArrangedSubview(forgotPasswordButton)
         forgotPasswordButton.widthAnchor.constraint(equalTo: emailTextField.widthAnchor, multiplier: 1).isActive = true
-        forgotPasswordButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor, multiplier: 1).isActive = true
+        forgotPasswordButton.heightAnchor.constraint(equalTo: emailTextField.heightAnchor, multiplier: 0.5).isActive = true
     }
     
     private func updateButton(){
         guard auth == .signUp else{return}
-        let enabled = emailTextField.status == .valid && passwordTextField.status == .valid && confirmationPasswordTextField.status  == .valid
+        let enabled = emailTextField.status == .valid && passwordTextField.status == .valid && confirmationPasswordTextField.status  == .valid && nameTextField.status == .valid
         button.isEnabled = enabled
     }
     
     @objc func signInOrSignUp(){
         view.endEditing(true)
-        guard let email = emailTextField.text,
+        guard let name = nameTextField.text,
+              let email = emailTextField.text,
               let password = passwordTextField.text
         else{return}
         if auth == .signIn{
             presenter?.signIn(email: email, password: password)
         }else{
-            presenter?.register(email: email, password: password)
+            presenter?.register(name: name, email: email, password: password)
         }
     }
     

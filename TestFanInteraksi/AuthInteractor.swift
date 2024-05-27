@@ -11,8 +11,8 @@ import FirebaseAuth
 class AuthInteractor: AuthPresenterToInteractorProtocol{
     var presenter: AuthInteractorToPresenterProtocol?
     
-    func updateUserData(token: String, email: String, id: String, isVerified: Bool) {
-        NetworkManager.shared.setDocument(model: UserProfileModel(name: email.getEmailName(), id: id, profilePictureUrl: "", isVerified: isVerified, email: email), document: .user(id)) { [weak self] result in
+    func updateUserData(name: String, token: String, email: String, id: String, isVerified: Bool) {
+        NetworkManager.shared.setDocument(model: UserProfileModel(name: name, id: id, profilePictureUrl: "", isVerified: isVerified, email: email), document: .user(id)) { [weak self] result in
             switch result {
             case .success(_):
                 self?.presenter?.result(result: .success(.successfullyRegister(token)))
@@ -23,7 +23,7 @@ class AuthInteractor: AuthPresenterToInteractorProtocol{
         }
     }
     
-    func register(email: String, password: String) {
+    func register(name: String, email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { [weak self] auth, error in
             guard let self = self else{return}
             if let error = error{
@@ -33,7 +33,19 @@ class AuthInteractor: AuthPresenterToInteractorProtocol{
                 return
             }
             let token = auth?.user.refreshToken ?? ""
-            self.updateUserData(token: token, email: email, id: auth?.user.uid ?? "", isVerified: auth?.user.isEmailVerified ?? false)
+            self.updateUserData(name: name, token: token, email: email, id: auth?.user.uid ?? "", isVerified: auth?.user.isEmailVerified ?? false)
+            self.sendEmailVerification(to: email)
+        }
+    }
+    
+    func sendEmailVerification(to email: String){
+        NetworkManager.shared.sendVerificationEmail(email: email) { [weak self] error in
+            guard let self = self else{return}
+            if let error = error{
+                self.presenter?.result(result: .failure(error))
+            }else{
+                self.presenter?.result(result: .success(.successfullySentEmailVerification))
+            }
         }
     }
     
