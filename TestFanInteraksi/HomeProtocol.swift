@@ -13,6 +13,7 @@ protocol HomeViewProtocol{
     
     func updateTableView()
     func updateProfileData()
+    func stopRefreshControl()
 }
 
 protocol HomePresenterProtocol{
@@ -22,9 +23,10 @@ protocol HomePresenterProtocol{
     var router: HomeRouterProtocol?{get set}
     
     func viewDidLoad()
+    func userRefreshData()
     func result(result: Result<HomeSuccessType, Error>)
     func numberOfRows() -> Int
-    func getProfile() -> UserProfileModel
+    func getProfile() -> UserProfileModel?
     func profile(at index: Int) -> UserProfileModel
 }
 

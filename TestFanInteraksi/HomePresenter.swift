@@ -15,8 +15,19 @@ class HomePresenter: HomePresenterProtocol{
     
     var listOfProfile: [UserProfileModel] = []
     var profile: UserProfileModel?
+    private var finishFetchingProfile: Bool = false
+    private var finishFetchingProfiles: Bool = false
     
     func viewDidLoad(){
+        finishFetchingProfile = false
+        finishFetchingProfiles = false
+        interactor?.fetchFetchUserData()
+        interactor?.fetchUsersList()
+    }
+    
+    func userRefreshData(){
+        finishFetchingProfile = false
+        finishFetchingProfiles = false
         interactor?.fetchFetchUserData()
         interactor?.fetchUsersList()
     }
@@ -28,19 +39,32 @@ class HomePresenter: HomePresenterProtocol{
         case .failure(let error):
             handleError(error: error)
         }
+        if finishFetchingProfile && finishFetchingProfiles{
+            view?.stopRefreshControl()
+        }
     }
     
     func handleSuccess(type: HomeSuccessType){
         switch type{
         case .successfullyFetchedProfile(let profile):
-            break
+            self.profile = profile
+            finishFetchingProfile = true
+            view?.updateTableView()
         case .successfullyFetchedProfiles(let profiles):
+            finishFetchingProfiles = true
             break
         }
     }
     
     func handleError(error: Error){
-        
+        switch error{
+        case CustomError.failedToFetchProfile:
+            finishFetchingProfile = true
+        case CustomError.failedToFetchProfiles:
+            finishFetchingProfiles = true
+        default:
+            print("error: \(error.localizedDescription)")
+        }
     }
     
     func numberOfRows() -> Int {
@@ -50,7 +74,7 @@ class HomePresenter: HomePresenterProtocol{
     func profile(at index: Int) -> UserProfileModel {
         return listOfProfile[index]
     }
-    func getProfile() -> UserProfileModel {
-        return .init()
+    func getProfile() -> UserProfileModel? {
+        return profile
     }
 }

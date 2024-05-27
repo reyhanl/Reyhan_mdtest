@@ -22,6 +22,8 @@ enum CustomError: Error{
     case failedToUploadToStorage
     case notEnoughBalance
     case refundProblem
+    case failedToFetchProfile
+    case failedToFetchProfiles
 }
 
 extension CustomError: LocalizedError {

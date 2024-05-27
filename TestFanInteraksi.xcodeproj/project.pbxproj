@@ -51,6 +51,7 @@
 		FCD4AA322C04571500581412 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA312C04571500581412 /* HomeRouter.swift */; };
 		FCD4AA362C045E3400581412 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCD4AA352C045E3300581412 /* GoogleService-Info.plist */; };
 		FCD4AA3A2C045E4400581412 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCD4AA392C045E4400581412 /* GoogleService-Info.plist */; };
+		FCD4AA3C2C04813400581412 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA3B2C04813400581412 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		FCD4AA312C04571500581412 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
 		FCD4AA352C045E3300581412 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCD4AA392C045E4400581412 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FCD4AA3B2C04813400581412 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				FCD4AA0D2C043A9000581412 /* CustomButton.swift */,
 				FCD4AA212C04449D00581412 /* Extension+String.swift */,
 				FCD4A9B92C042F0F00581412 /* ViewController.swift */,
+				FCD4AA3B2C04813400581412 /* ProfileView.swift */,
 				FCD4AA272C044B9300581412 /* UserTableViewCell.swift */,
 				FCD4A9E82C042F2200581412 /* HomePresenter.swift */,
 				FCD4AA312C04571500581412 /* HomeRouter.swift */,
@@ -536,6 +539,7 @@
 				FCD4AA092C04385A00581412 /* ForgotPasswordViewController.swift in Sources */,
 				FCD4A9F12C042FC500581412 /* AuthViewController.swift in Sources */,
 				FCD4A9B82C042F0F00581412 /* SceneDelegate.swift in Sources */,
+				FCD4AA3C2C04813400581412 /* ProfileView.swift in Sources */,
 				FCD4AA0E2C043A9000581412 /* CustomButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
