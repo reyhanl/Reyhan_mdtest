@@ -151,6 +151,7 @@ class AuthViewController: UIViewController{
     }
     
     private func setupForSignIn(){
+        nameTextField.isHidden = true
         confirmationPasswordTextField.isHidden = true
         emailTextField.shouldValidate = false
         passwordTextField.shouldValidate = false
