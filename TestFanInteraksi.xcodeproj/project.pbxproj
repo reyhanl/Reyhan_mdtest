@@ -1,0 +1,907 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E9D2C2A57128FEBE213395C /* Pods_TestFanInteraksi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5C45863EB02EA4E23B1A8C /* Pods_TestFanInteraksi.framework */; };
+		32CAA40A1A0E3A530C4C110B /* Pods_TestFanInteraksi_TestFanInteraksiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE33304D7A321F416AD0646 /* Pods_TestFanInteraksi_TestFanInteraksiUITests.framework */; };
+		5EA6C9E0EC7DF4669096B6C1 /* Pods_TestFanInteraksiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4EA8CF1A22327AC443049A /* Pods_TestFanInteraksiTests.framework */; };
+		FCD4A9B62C042F0F00581412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9B52C042F0F00581412 /* AppDelegate.swift */; };
+		FCD4A9B82C042F0F00581412 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9B72C042F0F00581412 /* SceneDelegate.swift */; };
+		FCD4A9BA2C042F0F00581412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9B92C042F0F00581412 /* ViewController.swift */; };
+		FCD4A9BD2C042F0F00581412 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FCD4A9BC2C042F0F00581412 /* Base */; };
+		FCD4A9C02C042F0F00581412 /* TestFanInteraksi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9BE2C042F0F00581412 /* TestFanInteraksi.xcdatamodeld */; };
+		FCD4A9C22C042F1100581412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD4A9C12C042F1100581412 /* Assets.xcassets */; };
+		FCD4A9C52C042F1100581412 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FCD4A9C42C042F1100581412 /* Base */; };
+		FCD4A9D02C042F1200581412 /* TestFanInteraksiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9CF2C042F1200581412 /* TestFanInteraksiTests.swift */; };
+		FCD4A9DA2C042F1200581412 /* TestFanInteraksiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9D92C042F1200581412 /* TestFanInteraksiUITests.swift */; };
+		FCD4A9DC2C042F1200581412 /* TestFanInteraksiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9DB2C042F1200581412 /* TestFanInteraksiUITestsLaunchTests.swift */; };
+		FCD4A9E92C042F2200581412 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9E82C042F2200581412 /* HomePresenter.swift */; };
+		FCD4A9EB2C042F2D00581412 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9EA2C042F2D00581412 /* HomeInteractor.swift */; };
+		FCD4A9ED2C042F3C00581412 /* HomeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9EC2C042F3C00581412 /* HomeProtocol.swift */; };
+		FCD4A9EF2C042FB000581412 /* AuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9EE2C042FB000581412 /* AuthProtocol.swift */; };
+		FCD4A9F12C042FC500581412 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9F02C042FC500581412 /* AuthViewController.swift */; };
+		FCD4AA032C0435FC00581412 /* ForgotPasswordProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA022C0435FC00581412 /* ForgotPasswordProtocol.swift */; };
+		FCD4AA052C04360E00581412 /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA042C04360E00581412 /* ForgotPasswordPresenter.swift */; };
+		FCD4AA072C04368400581412 /* ForgotPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA062C04368400581412 /* ForgotPasswordInteractor.swift */; };
+		FCD4AA092C04385A00581412 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA082C04385A00581412 /* ForgotPasswordViewController.swift */; };
+		FCD4AA0C2C04389400581412 /* ForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA0B2C04389400581412 /* ForgotPasswordRouter.swift */; };
+		FCD4AA0E2C043A9000581412 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA0D2C043A9000581412 /* CustomButton.swift */; };
+		FCD4AA102C043AC400581412 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA0F2C043AC400581412 /* CustomTextView.swift */; };
+		FCD4AA122C043AE500581412 /* Extension+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA112C043AE500581412 /* Extension+UIColor.swift */; };
+		FCD4AA142C043B1D00581412 /* Extension+ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA132C043B1D00581412 /* Extension+ViewController.swift */; };
+		FCD4AA162C043B4800581412 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA152C043B4700581412 /* CustomError.swift */; };
+		FCD4AA182C043B6C00581412 /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA172C043B6C00581412 /* AuthPresenter.swift */; };
+		FCD4AA1A2C043C4100581412 /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA192C043C4100581412 /* AuthInteractor.swift */; };
+		FCD4AA1C2C043DA800581412 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA1B2C043DA800581412 /* NetworkManager.swift */; };
+		FCD4AA1E2C043DC600581412 /* FirebaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA1D2C043DC600581412 /* FirebaseType.swift */; };
+		FCD4AA202C043DF700581412 /* UserProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA1F2C043DF700581412 /* UserProfileModel.swift */; };
+		FCD4AA222C04449D00581412 /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA212C04449D00581412 /* Extension+String.swift */; };
+		FCD4AA242C04455600581412 /* Extension+NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA232C04455600581412 /* Extension+NotificationName.swift */; };
+		FCD4AA262C0445E600581412 /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA252C0445E600581412 /* UserDefaultHelper.swift */; };
+		FCD4AA282C044B9300581412 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA272C044B9300581412 /* UserTableViewCell.swift */; };
+		FCD4AA2A2C0451CB00581412 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA292C0451CB00581412 /* UIImage+Extension.swift */; };
+		FCD4AA2C2C04526A00581412 /* Readme in Resources */ = {isa = PBXBuildFile; fileRef = FCD4AA2B2C04526A00581412 /* Readme */; };
+		FCD4AA2E2C0455BF00581412 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA2D2C0455BF00581412 /* CustomNavigationController.swift */; };
+		FCD4AA302C0456CF00581412 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA2F2C0456CF00581412 /* AuthRouter.swift */; };
+		FCD4AA322C04571500581412 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA312C04571500581412 /* HomeRouter.swift */; };
+		FCD4AA362C045E3400581412 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCD4AA352C045E3300581412 /* GoogleService-Info.plist */; };
+		FCD4AA3A2C045E4400581412 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCD4AA392C045E4400581412 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FCD4A9CC2C042F1200581412 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCD4A9AA2C042F0F00581412 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCD4A9B12C042F0F00581412;
+			remoteInfo = TestFanInteraksi;
+		};
+		FCD4A9D62C042F1200581412 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCD4A9AA2C042F0F00581412 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCD4A9B12C042F0F00581412;
+			remoteInfo = TestFanInteraksi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C5C45863EB02EA4E23B1A8C /* Pods_TestFanInteraksi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFanInteraksi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F4EA8CF1A22327AC443049A /* Pods_TestFanInteraksiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFanInteraksiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EE33304D7A321F416AD0646 /* Pods_TestFanInteraksi_TestFanInteraksiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFanInteraksi_TestFanInteraksiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		428DC10264EB25F22AF411E6 /* Pods-TestFanInteraksi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFanInteraksi.release.xcconfig"; path = "Target Support Files/Pods-TestFanInteraksi/Pods-TestFanInteraksi.release.xcconfig"; sourceTree = "<group>"; };
+		64860838B847DC69F3EC4D2E /* Pods-TestFanInteraksiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFanInteraksiTests.release.xcconfig"; path = "Target Support Files/Pods-TestFanInteraksiTests/Pods-TestFanInteraksiTests.release.xcconfig"; sourceTree = "<group>"; };
+		72743D99AD985F82DCD074E8 /* Pods-TestFanInteraksi-TestFanInteraksiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFanInteraksi-TestFanInteraksiUITests.release.xcconfig"; path = "Target Support Files/Pods-TestFanInteraksi-TestFanInteraksiUITests/Pods-TestFanInteraksi-TestFanInteraksiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C1A650BDB09E5B5239E8C8AA /* Pods-TestFanInteraksiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFanInteraksiTests.debug.xcconfig"; path = "Target Support Files/Pods-TestFanInteraksiTests/Pods-TestFanInteraksiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C8FE7F17F0EA849A9C25E4CE /* Pods-TestFanInteraksi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFanInteraksi.debug.xcconfig"; path = "Target Support Files/Pods-TestFanInteraksi/Pods-TestFanInteraksi.debug.xcconfig"; sourceTree = "<group>"; };
+		F9637C29753B21922E81D65B /* Pods-TestFanInteraksi-TestFanInteraksiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFanInteraksi-TestFanInteraksiUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestFanInteraksi-TestFanInteraksiUITests/Pods-TestFanInteraksi-TestFanInteraksiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FCD4A9B22C042F0F00581412 /* TestFanInteraksi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFanInteraksi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCD4A9B52C042F0F00581412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FCD4A9B72C042F0F00581412 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FCD4A9B92C042F0F00581412 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCD4A9BC2C042F0F00581412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCD4A9BF2C042F0F00581412 /* TestFanInteraksi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestFanInteraksi.xcdatamodel; sourceTree = "<group>"; };
+		FCD4A9C12C042F1100581412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCD4A9C42C042F1100581412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FCD4A9C62C042F1100581412 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCD4A9CB2C042F1200581412 /* TestFanInteraksiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestFanInteraksiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCD4A9CF2C042F1200581412 /* TestFanInteraksiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFanInteraksiTests.swift; sourceTree = "<group>"; };
+		FCD4A9D52C042F1200581412 /* TestFanInteraksiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestFanInteraksiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCD4A9D92C042F1200581412 /* TestFanInteraksiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFanInteraksiUITests.swift; sourceTree = "<group>"; };
+		FCD4A9DB2C042F1200581412 /* TestFanInteraksiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFanInteraksiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FCD4A9E82C042F2200581412 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		FCD4A9EA2C042F2D00581412 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		FCD4A9EC2C042F3C00581412 /* HomeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocol.swift; sourceTree = "<group>"; };
+		FCD4A9EE2C042FB000581412 /* AuthProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProtocol.swift; sourceTree = "<group>"; };
+		FCD4A9F02C042FC500581412 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		FCD4AA022C0435FC00581412 /* ForgotPasswordProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordProtocol.swift; sourceTree = "<group>"; };
+		FCD4AA042C04360E00581412 /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
+		FCD4AA062C04368400581412 /* ForgotPasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordInteractor.swift; sourceTree = "<group>"; };
+		FCD4AA082C04385A00581412 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		FCD4AA0B2C04389400581412 /* ForgotPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRouter.swift; sourceTree = "<group>"; };
+		FCD4AA0D2C043A9000581412 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		FCD4AA0F2C043AC400581412 /* CustomTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
+		FCD4AA112C043AE500581412 /* Extension+UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIColor.swift"; sourceTree = "<group>"; };
+		FCD4AA132C043B1D00581412 /* Extension+ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+ViewController.swift"; sourceTree = "<group>"; };
+		FCD4AA152C043B4700581412 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		FCD4AA172C043B6C00581412 /* AuthPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthPresenter.swift; sourceTree = "<group>"; };
+		FCD4AA192C043C4100581412 /* AuthInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
+		FCD4AA1B2C043DA800581412 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FCD4AA1D2C043DC600581412 /* FirebaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseType.swift; sourceTree = "<group>"; };
+		FCD4AA1F2C043DF700581412 /* UserProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileModel.swift; sourceTree = "<group>"; };
+		FCD4AA212C04449D00581412 /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		FCD4AA232C04455600581412 /* Extension+NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+NotificationName.swift"; sourceTree = "<group>"; };
+		FCD4AA252C0445E600581412 /* UserDefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelper.swift; sourceTree = "<group>"; };
+		FCD4AA272C044B9300581412 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		FCD4AA292C0451CB00581412 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		FCD4AA2B2C04526A00581412 /* Readme */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme; sourceTree = "<group>"; };
+		FCD4AA2D2C0455BF00581412 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		FCD4AA2F2C0456CF00581412 /* AuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		FCD4AA312C04571500581412 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		FCD4AA352C045E3300581412 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FCD4AA392C045E4400581412 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCD4A9AF2C042F0F00581412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E9D2C2A57128FEBE213395C /* Pods_TestFanInteraksi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCD4A9C82C042F1200581412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EA6C9E0EC7DF4669096B6C1 /* Pods_TestFanInteraksiTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCD4A9D22C042F1200581412 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32CAA40A1A0E3A530C4C110B /* Pods_TestFanInteraksi_TestFanInteraksiUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B4EDA9657E716ADCD84B58D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C5C45863EB02EA4E23B1A8C /* Pods_TestFanInteraksi.framework */,
+				3EE33304D7A321F416AD0646 /* Pods_TestFanInteraksi_TestFanInteraksiUITests.framework */,
+				1F4EA8CF1A22327AC443049A /* Pods_TestFanInteraksiTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCEAA09BEFD2040100E52439 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8FE7F17F0EA849A9C25E4CE /* Pods-TestFanInteraksi.debug.xcconfig */,
+				428DC10264EB25F22AF411E6 /* Pods-TestFanInteraksi.release.xcconfig */,
+				F9637C29753B21922E81D65B /* Pods-TestFanInteraksi-TestFanInteraksiUITests.debug.xcconfig */,
+				72743D99AD985F82DCD074E8 /* Pods-TestFanInteraksi-TestFanInteraksiUITests.release.xcconfig */,
+				C1A650BDB09E5B5239E8C8AA /* Pods-TestFanInteraksiTests.debug.xcconfig */,
+				64860838B847DC69F3EC4D2E /* Pods-TestFanInteraksiTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FCD4A9A92C042F0F00581412 = {
+			isa = PBXGroup;
+			children = (
+				FCD4A9B42C042F0F00581412 /* TestFanInteraksi */,
+				FCD4A9CE2C042F1200581412 /* TestFanInteraksiTests */,
+				FCD4A9D82C042F1200581412 /* TestFanInteraksiUITests */,
+				FCD4A9B32C042F0F00581412 /* Products */,
+				CCEAA09BEFD2040100E52439 /* Pods */,
+				B4EDA9657E716ADCD84B58D7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FCD4A9B32C042F0F00581412 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCD4A9B22C042F0F00581412 /* TestFanInteraksi.app */,
+				FCD4A9CB2C042F1200581412 /* TestFanInteraksiTests.xctest */,
+				FCD4A9D52C042F1200581412 /* TestFanInteraksiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCD4A9B42C042F0F00581412 /* TestFanInteraksi */ = {
+			isa = PBXGroup;
+			children = (
+				FCD4A9B52C042F0F00581412 /* AppDelegate.swift */,
+				FCD4AA152C043B4700581412 /* CustomError.swift */,
+				FCD4A9B72C042F0F00581412 /* SceneDelegate.swift */,
+				FCD4AA2D2C0455BF00581412 /* CustomNavigationController.swift */,
+				FCD4AA0D2C043A9000581412 /* CustomButton.swift */,
+				FCD4AA212C04449D00581412 /* Extension+String.swift */,
+				FCD4A9B92C042F0F00581412 /* ViewController.swift */,
+				FCD4AA272C044B9300581412 /* UserTableViewCell.swift */,
+				FCD4A9E82C042F2200581412 /* HomePresenter.swift */,
+				FCD4AA312C04571500581412 /* HomeRouter.swift */,
+				FCD4AA292C0451CB00581412 /* UIImage+Extension.swift */,
+				FCD4AA2B2C04526A00581412 /* Readme */,
+				FCD4AA352C045E3300581412 /* GoogleService-Info.plist */,
+				FCD4A9EC2C042F3C00581412 /* HomeProtocol.swift */,
+				FCD4A9EA2C042F2D00581412 /* HomeInteractor.swift */,
+				FCD4AA392C045E4400581412 /* GoogleService-Info.plist */,
+				FCD4AA112C043AE500581412 /* Extension+UIColor.swift */,
+				FCD4AA252C0445E600581412 /* UserDefaultHelper.swift */,
+				FCD4AA2F2C0456CF00581412 /* AuthRouter.swift */,
+				FCD4A9EE2C042FB000581412 /* AuthProtocol.swift */,
+				FCD4A9F02C042FC500581412 /* AuthViewController.swift */,
+				FCD4AA192C043C4100581412 /* AuthInteractor.swift */,
+				FCD4AA1F2C043DF700581412 /* UserProfileModel.swift */,
+				FCD4AA232C04455600581412 /* Extension+NotificationName.swift */,
+				FCD4AA1B2C043DA800581412 /* NetworkManager.swift */,
+				FCD4AA1D2C043DC600581412 /* FirebaseType.swift */,
+				FCD4AA172C043B6C00581412 /* AuthPresenter.swift */,
+				FCD4AA0F2C043AC400581412 /* CustomTextView.swift */,
+				FCD4AA022C0435FC00581412 /* ForgotPasswordProtocol.swift */,
+				FCD4AA132C043B1D00581412 /* Extension+ViewController.swift */,
+				FCD4AA0B2C04389400581412 /* ForgotPasswordRouter.swift */,
+				FCD4AA042C04360E00581412 /* ForgotPasswordPresenter.swift */,
+				FCD4AA082C04385A00581412 /* ForgotPasswordViewController.swift */,
+				FCD4AA062C04368400581412 /* ForgotPasswordInteractor.swift */,
+				FCD4A9BB2C042F0F00581412 /* Main.storyboard */,
+				FCD4A9C12C042F1100581412 /* Assets.xcassets */,
+				FCD4A9C32C042F1100581412 /* LaunchScreen.storyboard */,
+				FCD4A9C62C042F1100581412 /* Info.plist */,
+				FCD4A9BE2C042F0F00581412 /* TestFanInteraksi.xcdatamodeld */,
+			);
+			path = TestFanInteraksi;
+			sourceTree = "<group>";
+		};
+		FCD4A9CE2C042F1200581412 /* TestFanInteraksiTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCD4A9CF2C042F1200581412 /* TestFanInteraksiTests.swift */,
+			);
+			path = TestFanInteraksiTests;
+			sourceTree = "<group>";
+		};
+		FCD4A9D82C042F1200581412 /* TestFanInteraksiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FCD4A9D92C042F1200581412 /* TestFanInteraksiUITests.swift */,
+				FCD4A9DB2C042F1200581412 /* TestFanInteraksiUITestsLaunchTests.swift */,
+			);
+			path = TestFanInteraksiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCD4A9B12C042F0F00581412 /* TestFanInteraksi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCD4A9DF2C042F1200581412 /* Build configuration list for PBXNativeTarget "TestFanInteraksi" */;
+			buildPhases = (
+				DCD05B84E1DDFF5598FFAD77 /* [CP] Check Pods Manifest.lock */,
+				FCD4A9AE2C042F0F00581412 /* Sources */,
+				FCD4A9AF2C042F0F00581412 /* Frameworks */,
+				FCD4A9B02C042F0F00581412 /* Resources */,
+				6294378750F6FDC90D262F8D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestFanInteraksi;
+			productName = TestFanInteraksi;
+			productReference = FCD4A9B22C042F0F00581412 /* TestFanInteraksi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FCD4A9CA2C042F1200581412 /* TestFanInteraksiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCD4A9E22C042F1200581412 /* Build configuration list for PBXNativeTarget "TestFanInteraksiTests" */;
+			buildPhases = (
+				AB9A4AD9625637F78AB013DD /* [CP] Check Pods Manifest.lock */,
+				FCD4A9C72C042F1200581412 /* Sources */,
+				FCD4A9C82C042F1200581412 /* Frameworks */,
+				FCD4A9C92C042F1200581412 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCD4A9CD2C042F1200581412 /* PBXTargetDependency */,
+			);
+			name = TestFanInteraksiTests;
+			productName = TestFanInteraksiTests;
+			productReference = FCD4A9CB2C042F1200581412 /* TestFanInteraksiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FCD4A9D42C042F1200581412 /* TestFanInteraksiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCD4A9E52C042F1200581412 /* Build configuration list for PBXNativeTarget "TestFanInteraksiUITests" */;
+			buildPhases = (
+				F189BA6675F23B2222F2BFFE /* [CP] Check Pods Manifest.lock */,
+				FCD4A9D12C042F1200581412 /* Sources */,
+				FCD4A9D22C042F1200581412 /* Frameworks */,
+				FCD4A9D32C042F1200581412 /* Resources */,
+				22D026B3BC6F9C6ABF4F1044 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCD4A9D72C042F1200581412 /* PBXTargetDependency */,
+			);
+			name = TestFanInteraksiUITests;
+			productName = TestFanInteraksiUITests;
+			productReference = FCD4A9D52C042F1200581412 /* TestFanInteraksiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCD4A9AA2C042F0F00581412 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					FCD4A9B12C042F0F00581412 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					FCD4A9CA2C042F1200581412 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = FCD4A9B12C042F0F00581412;
+					};
+					FCD4A9D42C042F1200581412 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = FCD4A9B12C042F0F00581412;
+					};
+				};
+			};
+			buildConfigurationList = FCD4A9AD2C042F0F00581412 /* Build configuration list for PBXProject "TestFanInteraksi" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCD4A9A92C042F0F00581412;
+			productRefGroup = FCD4A9B32C042F0F00581412 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCD4A9B12C042F0F00581412 /* TestFanInteraksi */,
+				FCD4A9CA2C042F1200581412 /* TestFanInteraksiTests */,
+				FCD4A9D42C042F1200581412 /* TestFanInteraksiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCD4A9B02C042F0F00581412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCD4AA2C2C04526A00581412 /* Readme in Resources */,
+				FCD4A9C22C042F1100581412 /* Assets.xcassets in Resources */,
+				FCD4AA362C045E3400581412 /* GoogleService-Info.plist in Resources */,
+				FCD4A9C52C042F1100581412 /* Base in Resources */,
+				FCD4A9BD2C042F0F00581412 /* Base in Resources */,
+				FCD4AA3A2C045E4400581412 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCD4A9C92C042F1200581412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCD4A9D32C042F1200581412 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22D026B3BC6F9C6ABF4F1044 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFanInteraksi-TestFanInteraksiUITests/Pods-TestFanInteraksi-TestFanInteraksiUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFanInteraksi-TestFanInteraksiUITests/Pods-TestFanInteraksi-TestFanInteraksiUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestFanInteraksi-TestFanInteraksiUITests/Pods-TestFanInteraksi-TestFanInteraksiUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6294378750F6FDC90D262F8D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFanInteraksi/Pods-TestFanInteraksi-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestFanInteraksi/Pods-TestFanInteraksi-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestFanInteraksi/Pods-TestFanInteraksi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB9A4AD9625637F78AB013DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestFanInteraksiTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCD05B84E1DDFF5598FFAD77 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestFanInteraksi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F189BA6675F23B2222F2BFFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestFanInteraksi-TestFanInteraksiUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCD4A9AE2C042F0F00581412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCD4AA182C043B6C00581412 /* AuthPresenter.swift in Sources */,
+				FCD4AA262C0445E600581412 /* UserDefaultHelper.swift in Sources */,
+				FCD4A9ED2C042F3C00581412 /* HomeProtocol.swift in Sources */,
+				FCD4AA1A2C043C4100581412 /* AuthInteractor.swift in Sources */,
+				FCD4AA052C04360E00581412 /* ForgotPasswordPresenter.swift in Sources */,
+				FCD4AA1C2C043DA800581412 /* NetworkManager.swift in Sources */,
+				FCD4AA2E2C0455BF00581412 /* CustomNavigationController.swift in Sources */,
+				FCD4AA032C0435FC00581412 /* ForgotPasswordProtocol.swift in Sources */,
+				FCD4AA1E2C043DC600581412 /* FirebaseType.swift in Sources */,
+				FCD4A9EF2C042FB000581412 /* AuthProtocol.swift in Sources */,
+				FCD4AA142C043B1D00581412 /* Extension+ViewController.swift in Sources */,
+				FCD4AA072C04368400581412 /* ForgotPasswordInteractor.swift in Sources */,
+				FCD4AA222C04449D00581412 /* Extension+String.swift in Sources */,
+				FCD4AA202C043DF700581412 /* UserProfileModel.swift in Sources */,
+				FCD4AA302C0456CF00581412 /* AuthRouter.swift in Sources */,
+				FCD4A9C02C042F0F00581412 /* TestFanInteraksi.xcdatamodeld in Sources */,
+				FCD4AA162C043B4800581412 /* CustomError.swift in Sources */,
+				FCD4AA242C04455600581412 /* Extension+NotificationName.swift in Sources */,
+				FCD4AA282C044B9300581412 /* UserTableViewCell.swift in Sources */,
+				FCD4A9BA2C042F0F00581412 /* ViewController.swift in Sources */,
+				FCD4A9B62C042F0F00581412 /* AppDelegate.swift in Sources */,
+				FCD4AA322C04571500581412 /* HomeRouter.swift in Sources */,
+				FCD4A9EB2C042F2D00581412 /* HomeInteractor.swift in Sources */,
+				FCD4A9E92C042F2200581412 /* HomePresenter.swift in Sources */,
+				FCD4AA102C043AC400581412 /* CustomTextView.swift in Sources */,
+				FCD4AA2A2C0451CB00581412 /* UIImage+Extension.swift in Sources */,
+				FCD4AA122C043AE500581412 /* Extension+UIColor.swift in Sources */,
+				FCD4AA0C2C04389400581412 /* ForgotPasswordRouter.swift in Sources */,
+				FCD4AA092C04385A00581412 /* ForgotPasswordViewController.swift in Sources */,
+				FCD4A9F12C042FC500581412 /* AuthViewController.swift in Sources */,
+				FCD4A9B82C042F0F00581412 /* SceneDelegate.swift in Sources */,
+				FCD4AA0E2C043A9000581412 /* CustomButton.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCD4A9C72C042F1200581412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCD4A9D02C042F1200581412 /* TestFanInteraksiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCD4A9D12C042F1200581412 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCD4A9DA2C042F1200581412 /* TestFanInteraksiUITests.swift in Sources */,
+				FCD4A9DC2C042F1200581412 /* TestFanInteraksiUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCD4A9CD2C042F1200581412 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCD4A9B12C042F0F00581412 /* TestFanInteraksi */;
+			targetProxy = FCD4A9CC2C042F1200581412 /* PBXContainerItemProxy */;
+		};
+		FCD4A9D72C042F1200581412 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCD4A9B12C042F0F00581412 /* TestFanInteraksi */;
+			targetProxy = FCD4A9D62C042F1200581412 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FCD4A9BB2C042F0F00581412 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCD4A9BC2C042F0F00581412 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCD4A9C32C042F1100581412 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCD4A9C42C042F1100581412 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCD4A9DD2C042F1200581412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FCD4A9DE2C042F1200581412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCD4A9E02C042F1200581412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8FE7F17F0EA849A9C25E4CE /* Pods-TestFanInteraksi.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J286DXAZ52;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestFanInteraksi/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testFanInteraksi.reyhan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCD4A9E12C042F1200581412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 428DC10264EB25F22AF411E6 /* Pods-TestFanInteraksi.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J286DXAZ52;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TestFanInteraksi/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testFanInteraksi.reyhan;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FCD4A9E32C042F1200581412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1A650BDB09E5B5239E8C8AA /* Pods-TestFanInteraksiTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J286DXAZ52;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.TestFanInteraksiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestFanInteraksi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestFanInteraksi";
+			};
+			name = Debug;
+		};
+		FCD4A9E42C042F1200581412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64860838B847DC69F3EC4D2E /* Pods-TestFanInteraksiTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J286DXAZ52;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.TestFanInteraksiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestFanInteraksi.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestFanInteraksi";
+			};
+			name = Release;
+		};
+		FCD4A9E62C042F1200581412 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9637C29753B21922E81D65B /* Pods-TestFanInteraksi-TestFanInteraksiUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J286DXAZ52;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.TestFanInteraksiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestFanInteraksi;
+			};
+			name = Debug;
+		};
+		FCD4A9E72C042F1200581412 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72743D99AD985F82DCD074E8 /* Pods-TestFanInteraksi-TestFanInteraksiUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J286DXAZ52;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = test.TestFanInteraksiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestFanInteraksi;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCD4A9AD2C042F0F00581412 /* Build configuration list for PBXProject "TestFanInteraksi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCD4A9DD2C042F1200581412 /* Debug */,
+				FCD4A9DE2C042F1200581412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCD4A9DF2C042F1200581412 /* Build configuration list for PBXNativeTarget "TestFanInteraksi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCD4A9E02C042F1200581412 /* Debug */,
+				FCD4A9E12C042F1200581412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCD4A9E22C042F1200581412 /* Build configuration list for PBXNativeTarget "TestFanInteraksiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCD4A9E32C042F1200581412 /* Debug */,
+				FCD4A9E42C042F1200581412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCD4A9E52C042F1200581412 /* Build configuration list for PBXNativeTarget "TestFanInteraksiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCD4A9E62C042F1200581412 /* Debug */,
+				FCD4A9E72C042F1200581412 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FCD4A9BE2C042F0F00581412 /* TestFanInteraksi.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FCD4A9BF2C042F0F00581412 /* TestFanInteraksi.xcdatamodel */,
+			);
+			currentVersion = FCD4A9BF2C042F0F00581412 /* TestFanInteraksi.xcdatamodel */;
+			path = TestFanInteraksi.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FCD4A9AA2C042F0F00581412 /* Project object */;
+}

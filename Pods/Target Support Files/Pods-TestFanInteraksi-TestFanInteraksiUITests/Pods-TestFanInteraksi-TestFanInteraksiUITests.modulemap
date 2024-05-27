@@ -1,0 +1,6 @@
+framework module Pods_TestFanInteraksi_TestFanInteraksiUITests {
+  umbrella header "Pods-TestFanInteraksi-TestFanInteraksiUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
