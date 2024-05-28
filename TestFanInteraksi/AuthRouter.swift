@@ -37,7 +37,7 @@ class AuthRouter: AuthPresenterToRouterProtocol{
     }
     
     func goToForgotPassword(from vc: UIViewController) {
-        let forgotPasswordVC = ForgotPasswordViewController()
+        let forgotPasswordVC = ForgotPasswordRouter.makeComponent()
         vc.navigationController?.pushViewController(forgotPasswordVC, animated: true)
     }
 }

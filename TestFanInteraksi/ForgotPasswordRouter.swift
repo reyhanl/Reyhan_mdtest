@@ -26,6 +26,6 @@ class ForgotPasswordRouter: ForgotPasswordRouterProtocol{
     }
     
     func gotToAuthVC(with vc: UIViewController) {
-        
+        vc.navigationController?.popViewController(animated: true)
     }
 }

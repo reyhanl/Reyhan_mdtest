@@ -101,7 +101,6 @@ class AuthViewController: UIViewController{
     lazy var forgotPasswordButton: CustomButton = {
         let button = CustomButton(frame: .zero)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(goToSignIn), for: .touchUpInside)
         button.layer.cornerRadius = 5
         button.backgroundColor = .clear
         button.setTitle("Forgot password", for: .normal)

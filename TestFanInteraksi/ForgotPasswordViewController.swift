@@ -31,7 +31,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate{
         textField.delegate = self
         textField.layer.cornerRadius = 5
         textField.backgroundColor = .systemFill
-        textField.addTarget(target: self, selector: #selector(textDidChange(_:)), for: .valueChanged)
+        textField.addTarget(target: self, selector: #selector(textDidChange(_:)), for: .editingChanged)
         textField.validation = [.isAValidEmailAddress]
         return textField
     }()
@@ -60,7 +60,6 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addEmailTextField()
         addContainer()
         addStackView()
         addEmailTextField()
@@ -128,6 +127,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate{
     
     func updateButton(){
         let enabled = emailTextField.status == .valid
+        print(enabled)
         button.isEnabled = enabled
     }
 }
