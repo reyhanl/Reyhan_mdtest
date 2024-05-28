@@ -1,2 +1,0 @@
-
-I do not have money to use FirebaseCloudFunction to implement my own FirebaseAdmin, or money to spend on using a custom server to omplement FirebaseAdmin since it is not available officially on iOS. That is why I use this third party library, which I am aware might compromise security. Anyway, in a real project I would ask the company I work for to enable FirebaseCloudFunction functionality, which again is going to cost money.

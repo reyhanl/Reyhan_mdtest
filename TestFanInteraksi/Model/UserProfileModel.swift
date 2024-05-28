@@ -7,7 +7,19 @@
 
 import Foundation
 
-class UserProfileModel: Codable{
+class UserProfileModel: Codable, Hashable{
+    var identifier: String {
+       return UUID().uuidString
+   }
+   
+   public func hash(into hasher: inout Hasher) {
+       return hasher.combine(identifier)
+   }
+   
+   public static func == (lhs: UserProfileModel, rhs: UserProfileModel) -> Bool {
+       return lhs.identifier == rhs.identifier
+   }
+    
     var name: String?
     var id: String?
     var profilePictureUrl: String?

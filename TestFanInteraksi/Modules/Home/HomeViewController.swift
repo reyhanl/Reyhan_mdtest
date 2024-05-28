@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, HomeViewProtocol {
+class HomeViewController: UIViewController, HomeViewProtocol , UISearchBarDelegate, UISearchControllerDelegate{
     
     lazy var tableView: UITableView = {
         let tableView = UITableView()
@@ -17,6 +17,14 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         tableView.register(UserTableViewCell.self, forCellReuseIdentifier: "cell")
         return tableView
     }()
+    lazy var filterView: FilterView = {
+        let view = FilterView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.delegate = self
+        return view
+    }()
+    
+    var searchController: UISearchController?
     let refreshControl = UIRefreshControl()
     
     var presenter: HomePresenterProtocol?
@@ -26,6 +34,8 @@ class HomeViewController: UIViewController, HomeViewProtocol {
         view.backgroundColor = .systemBackground    
         presenter?.viewDidLoad()
         addTableView()
+        addSearchBar()
+        addFilterView()
         addSignOutButton()
         addPullToRefresh()
         // Do any additional setup after loading the view.
@@ -40,6 +50,25 @@ class HomeViewController: UIViewController, HomeViewProtocol {
             NSLayoutConstraint(item: tableView, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1, constant: 0),
             NSLayoutConstraint(item: tableView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 0)
         ])
+    }
+    
+    func addFilterView(){
+        view.addSubview(filterView)
+        
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: filterView, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1, constant: -50),
+            NSLayoutConstraint(item: filterView, attribute: .leading, relatedBy: .equal, toItem: self.view, attribute: .leading, multiplier: 1, constant: 10),
+            NSLayoutConstraint(item: filterView, attribute: .trailing, relatedBy: .equal, toItem: self.view, attribute: .trailing, multiplier: 1, constant: -10),
+            NSLayoutConstraint(item: filterView, attribute: .height, relatedBy: .equal, toItem: .none, attribute: .notAnAttribute, multiplier: 1, constant: 30),
+        ])
+    }
+    
+    func addSearchBar(){
+        let search = UISearchController(searchResultsController: nil)
+        search.delegate = self
+        search.searchBar.delegate = self
+        self.navigationItem.searchController = search
+        self.searchController = search
     }
     
     func addSignOutButton(){
@@ -71,6 +100,11 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     @objc func signOut(){
         presenter?.signOut()
     }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        guard let text = searchBar.text else{return}
+        presenter?.search(text, filter: filterView.filter)
+    }
 }
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
@@ -100,6 +134,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+}
+
+extension HomeViewController: FilterViewDelegate{
+    func userDidSelectFilter(filter: Filter) {
+        presenter?.search(searchController?.searchBar.text ?? "", filter: filterView.filter)
     }
 }
 

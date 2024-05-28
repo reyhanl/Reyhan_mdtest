@@ -10,6 +10,8 @@
 		0E9D2C2A57128FEBE213395C /* Pods_TestFanInteraksi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5C45863EB02EA4E23B1A8C /* Pods_TestFanInteraksi.framework */; };
 		32CAA40A1A0E3A530C4C110B /* Pods_TestFanInteraksi_TestFanInteraksiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EE33304D7A321F416AD0646 /* Pods_TestFanInteraksi_TestFanInteraksiUITests.framework */; };
 		5EA6C9E0EC7DF4669096B6C1 /* Pods_TestFanInteraksiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4EA8CF1A22327AC443049A /* Pods_TestFanInteraksiTests.framework */; };
+		FC1E0A892C05EFB300F90C08 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E0A882C05EFB300F90C08 /* FilterView.swift */; };
+		FC1E0A8B2C05F18200F90C08 /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1E0A8A2C05F18200F90C08 /* FilterCollectionViewCell.swift */; };
 		FCD4A9B62C042F0F00581412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9B52C042F0F00581412 /* AppDelegate.swift */; };
 		FCD4A9B82C042F0F00581412 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9B72C042F0F00581412 /* SceneDelegate.swift */; };
 		FCD4A9BA2C042F0F00581412 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9B92C042F0F00581412 /* HomeViewController.swift */; };
@@ -45,7 +47,7 @@
 		FCD4AA262C0445E600581412 /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA252C0445E600581412 /* UserDefaultHelper.swift */; };
 		FCD4AA282C044B9300581412 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA272C044B9300581412 /* UserTableViewCell.swift */; };
 		FCD4AA2A2C0451CB00581412 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA292C0451CB00581412 /* UIImage+Extension.swift */; };
-		FCD4AA2C2C04526A00581412 /* Readme in Resources */ = {isa = PBXBuildFile; fileRef = FCD4AA2B2C04526A00581412 /* Readme */; };
+		FCD4AA2C2C04526A00581412 /* Readme.md in Resources */ = {isa = PBXBuildFile; fileRef = FCD4AA2B2C04526A00581412 /* Readme.md */; };
 		FCD4AA2E2C0455BF00581412 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA2D2C0455BF00581412 /* CustomNavigationController.swift */; };
 		FCD4AA302C0456CF00581412 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA2F2C0456CF00581412 /* AuthRouter.swift */; };
 		FCD4AA322C04571500581412 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA312C04571500581412 /* HomeRouter.swift */; };
@@ -84,6 +86,8 @@
 		C1A650BDB09E5B5239E8C8AA /* Pods-TestFanInteraksiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFanInteraksiTests.debug.xcconfig"; path = "Target Support Files/Pods-TestFanInteraksiTests/Pods-TestFanInteraksiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C8FE7F17F0EA849A9C25E4CE /* Pods-TestFanInteraksi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFanInteraksi.debug.xcconfig"; path = "Target Support Files/Pods-TestFanInteraksi/Pods-TestFanInteraksi.debug.xcconfig"; sourceTree = "<group>"; };
 		F9637C29753B21922E81D65B /* Pods-TestFanInteraksi-TestFanInteraksiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFanInteraksi-TestFanInteraksiUITests.debug.xcconfig"; path = "Target Support Files/Pods-TestFanInteraksi-TestFanInteraksiUITests/Pods-TestFanInteraksi-TestFanInteraksiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC1E0A882C05EFB300F90C08 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		FC1E0A8A2C05F18200F90C08 /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
 		FCD4A9B22C042F0F00581412 /* TestFanInteraksi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFanInteraksi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD4A9B52C042F0F00581412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD4A9B72C042F0F00581412 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,7 +127,7 @@
 		FCD4AA252C0445E600581412 /* UserDefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelper.swift; sourceTree = "<group>"; };
 		FCD4AA272C044B9300581412 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		FCD4AA292C0451CB00581412 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
-		FCD4AA2B2C04526A00581412 /* Readme */ = {isa = PBXFileReference; lastKnownFileType = text; path = Readme; sourceTree = "<group>"; };
+		FCD4AA2B2C04526A00581412 /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		FCD4AA2D2C0455BF00581412 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		FCD4AA2F2C0456CF00581412 /* AuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
 		FCD4AA312C04571500581412 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
@@ -287,6 +291,8 @@
 				FCD4AA2D2C0455BF00581412 /* CustomNavigationController.swift */,
 				FCD4AA272C044B9300581412 /* UserTableViewCell.swift */,
 				FCD4AA0F2C043AC400581412 /* CustomTextView.swift */,
+				FC1E0A882C05EFB300F90C08 /* FilterView.swift */,
+				FC1E0A8A2C05F18200F90C08 /* FilterCollectionViewCell.swift */,
 				FCD4AA0D2C043A9000581412 /* CustomButton.swift */,
 				FCD4AA3B2C04813400581412 /* ProfileView.swift */,
 			);
@@ -325,7 +331,7 @@
 				FC1E0A812C05E46100F90C08 /* Model */,
 				FC1E0A7E2C05E43E00F90C08 /* Networking */,
 				FCD4A9B72C042F0F00581412 /* SceneDelegate.swift */,
-				FCD4AA2B2C04526A00581412 /* Readme */,
+				FCD4AA2B2C04526A00581412 /* Readme.md */,
 				FCD4AA352C045E3300581412 /* GoogleService-Info.plist */,
 				FCD4AA392C045E4400581412 /* GoogleService-Info.plist */,
 				FCD4AA252C0445E600581412 /* UserDefaultHelper.swift */,
@@ -464,7 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCD4AA2C2C04526A00581412 /* Readme in Resources */,
+				FCD4AA2C2C04526A00581412 /* Readme.md in Resources */,
 				FCD4A9C22C042F1100581412 /* Assets.xcassets in Resources */,
 				FCD4AA362C045E3400581412 /* GoogleService-Info.plist in Resources */,
 				FCD4A9C52C042F1100581412 /* Base in Resources */,
@@ -619,6 +625,7 @@
 				FCD4AA282C044B9300581412 /* UserTableViewCell.swift in Sources */,
 				FCD4A9BA2C042F0F00581412 /* HomeViewController.swift in Sources */,
 				FCD4A9B62C042F0F00581412 /* AppDelegate.swift in Sources */,
+				FC1E0A8B2C05F18200F90C08 /* FilterCollectionViewCell.swift in Sources */,
 				FCD4AA322C04571500581412 /* HomeRouter.swift in Sources */,
 				FCD4A9EB2C042F2D00581412 /* HomeInteractor.swift in Sources */,
 				FCD4A9E92C042F2200581412 /* HomePresenter.swift in Sources */,
@@ -633,6 +640,7 @@
 				FCD4AA402C05B1DE00581412 /* Request.swift in Sources */,
 				FCD4AA3C2C04813400581412 /* ProfileView.swift in Sources */,
 				FCD4AA0E2C043A9000581412 /* CustomButton.swift in Sources */,
+				FC1E0A892C05EFB300F90C08 /* FilterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

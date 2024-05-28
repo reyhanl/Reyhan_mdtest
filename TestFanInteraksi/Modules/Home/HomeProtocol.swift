@@ -27,6 +27,7 @@ protocol HomePresenterProtocol{
     func result(result: Result<HomeSuccessType, Error>)
     func numberOfRows() -> Int
     func getProfile() -> UserProfileModel?
+    func search(_ text: String, filter: Filter)
     func profile(at index: Int) -> UserProfileModel
     func signOut()
 }
