@@ -7,6 +7,7 @@
 
 import Foundation
 
+//This is use for user data that is fetched from the server not firebase
 struct UserDefaultModel: Codable{
     var uid: String
     var email: String

@@ -12,7 +12,7 @@
 		5EA6C9E0EC7DF4669096B6C1 /* Pods_TestFanInteraksiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4EA8CF1A22327AC443049A /* Pods_TestFanInteraksiTests.framework */; };
 		FCD4A9B62C042F0F00581412 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9B52C042F0F00581412 /* AppDelegate.swift */; };
 		FCD4A9B82C042F0F00581412 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9B72C042F0F00581412 /* SceneDelegate.swift */; };
-		FCD4A9BA2C042F0F00581412 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9B92C042F0F00581412 /* ViewController.swift */; };
+		FCD4A9BA2C042F0F00581412 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9B92C042F0F00581412 /* HomeViewController.swift */; };
 		FCD4A9BD2C042F0F00581412 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = FCD4A9BC2C042F0F00581412 /* Base */; };
 		FCD4A9C02C042F0F00581412 /* TestFanInteraksi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FCD4A9BE2C042F0F00581412 /* TestFanInteraksi.xcdatamodeld */; };
 		FCD4A9C22C042F1100581412 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD4A9C12C042F1100581412 /* Assets.xcassets */; };
@@ -87,7 +87,7 @@
 		FCD4A9B22C042F0F00581412 /* TestFanInteraksi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFanInteraksi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD4A9B52C042F0F00581412 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD4A9B72C042F0F00581412 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FCD4A9B92C042F0F00581412 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCD4A9B92C042F0F00581412 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FCD4A9BC2C042F0F00581412 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCD4A9BF2C042F0F00581412 /* TestFanInteraksi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TestFanInteraksi.xcdatamodel; sourceTree = "<group>"; };
 		FCD4A9C12C042F1100581412 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -186,6 +186,113 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FC1E0A7E2C05E43E00F90C08 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				FC1E0A802C05E45100F90C08 /* Firebase */,
+				FC1E0A7F2C05E44700F90C08 /* APIService */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		FC1E0A7F2C05E44700F90C08 /* APIService */ = {
+			isa = PBXGroup;
+			children = (
+				FCD4AA3D2C05B1A800581412 /* SessionManager.swift */,
+				FCD4AA3F2C05B1DE00581412 /* Request.swift */,
+			);
+			path = APIService;
+			sourceTree = "<group>";
+		};
+		FC1E0A802C05E45100F90C08 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				FCD4AA1B2C043DA800581412 /* NetworkManager.swift */,
+				FCD4AA1D2C043DC600581412 /* FirebaseType.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		FC1E0A812C05E46100F90C08 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FCD4AA412C05B28F00581412 /* UserDefaultModel.swift */,
+				FCD4AA1F2C043DF700581412 /* UserProfileModel.swift */,
+				FCD4AA152C043B4700581412 /* CustomError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC1E0A822C05E49E00F90C08 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				FC1E0A852C05E4CF00F90C08 /* ForgotPassword */,
+				FC1E0A842C05E4BE00F90C08 /* Auth */,
+				FC1E0A832C05E4A300F90C08 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		FC1E0A832C05E4A300F90C08 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FCD4A9B92C042F0F00581412 /* HomeViewController.swift */,
+				FCD4A9E82C042F2200581412 /* HomePresenter.swift */,
+				FCD4AA312C04571500581412 /* HomeRouter.swift */,
+				FCD4A9EC2C042F3C00581412 /* HomeProtocol.swift */,
+				FCD4A9EA2C042F2D00581412 /* HomeInteractor.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FC1E0A842C05E4BE00F90C08 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FCD4AA2F2C0456CF00581412 /* AuthRouter.swift */,
+				FCD4A9EE2C042FB000581412 /* AuthProtocol.swift */,
+				FCD4A9F02C042FC500581412 /* AuthViewController.swift */,
+				FCD4AA192C043C4100581412 /* AuthInteractor.swift */,
+				FCD4AA172C043B6C00581412 /* AuthPresenter.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FC1E0A852C05E4CF00F90C08 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				FCD4AA022C0435FC00581412 /* ForgotPasswordProtocol.swift */,
+				FCD4AA0B2C04389400581412 /* ForgotPasswordRouter.swift */,
+				FCD4AA042C04360E00581412 /* ForgotPasswordPresenter.swift */,
+				FCD4AA082C04385A00581412 /* ForgotPasswordViewController.swift */,
+				FCD4AA062C04368400581412 /* ForgotPasswordInteractor.swift */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		FC1E0A862C05E4DE00F90C08 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FCD4AA292C0451CB00581412 /* UIImage+Extension.swift */,
+				FCD4AA212C04449D00581412 /* Extension+String.swift */,
+				FCD4AA112C043AE500581412 /* Extension+UIColor.swift */,
+				FCD4AA232C04455600581412 /* Extension+NotificationName.swift */,
+				FCD4AA132C043B1D00581412 /* Extension+ViewController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		FC1E0A872C05E50400F90C08 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCD4AA2D2C0455BF00581412 /* CustomNavigationController.swift */,
+				FCD4AA272C044B9300581412 /* UserTableViewCell.swift */,
+				FCD4AA0F2C043AC400581412 /* CustomTextView.swift */,
+				FCD4AA0D2C043A9000581412 /* CustomButton.swift */,
+				FCD4AA3B2C04813400581412 /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FCD4A9A92C042F0F00581412 = {
 			isa = PBXGroup;
 			children = (
@@ -212,43 +319,16 @@
 			isa = PBXGroup;
 			children = (
 				FCD4A9B52C042F0F00581412 /* AppDelegate.swift */,
-				FCD4AA152C043B4700581412 /* CustomError.swift */,
+				FC1E0A872C05E50400F90C08 /* View */,
+				FC1E0A862C05E4DE00F90C08 /* Extension */,
+				FC1E0A822C05E49E00F90C08 /* Modules */,
+				FC1E0A812C05E46100F90C08 /* Model */,
+				FC1E0A7E2C05E43E00F90C08 /* Networking */,
 				FCD4A9B72C042F0F00581412 /* SceneDelegate.swift */,
-				FCD4AA2D2C0455BF00581412 /* CustomNavigationController.swift */,
-				FCD4AA0D2C043A9000581412 /* CustomButton.swift */,
-				FCD4AA212C04449D00581412 /* Extension+String.swift */,
-				FCD4A9B92C042F0F00581412 /* ViewController.swift */,
-				FCD4AA3D2C05B1A800581412 /* SessionManager.swift */,
-				FCD4AA3F2C05B1DE00581412 /* Request.swift */,
-				FCD4AA3B2C04813400581412 /* ProfileView.swift */,
-				FCD4AA272C044B9300581412 /* UserTableViewCell.swift */,
-				FCD4A9E82C042F2200581412 /* HomePresenter.swift */,
-				FCD4AA312C04571500581412 /* HomeRouter.swift */,
-				FCD4AA292C0451CB00581412 /* UIImage+Extension.swift */,
 				FCD4AA2B2C04526A00581412 /* Readme */,
 				FCD4AA352C045E3300581412 /* GoogleService-Info.plist */,
-				FCD4A9EC2C042F3C00581412 /* HomeProtocol.swift */,
-				FCD4A9EA2C042F2D00581412 /* HomeInteractor.swift */,
-				FCD4AA412C05B28F00581412 /* UserDefaultModel.swift */,
 				FCD4AA392C045E4400581412 /* GoogleService-Info.plist */,
-				FCD4AA112C043AE500581412 /* Extension+UIColor.swift */,
 				FCD4AA252C0445E600581412 /* UserDefaultHelper.swift */,
-				FCD4AA2F2C0456CF00581412 /* AuthRouter.swift */,
-				FCD4A9EE2C042FB000581412 /* AuthProtocol.swift */,
-				FCD4A9F02C042FC500581412 /* AuthViewController.swift */,
-				FCD4AA192C043C4100581412 /* AuthInteractor.swift */,
-				FCD4AA1F2C043DF700581412 /* UserProfileModel.swift */,
-				FCD4AA232C04455600581412 /* Extension+NotificationName.swift */,
-				FCD4AA1B2C043DA800581412 /* NetworkManager.swift */,
-				FCD4AA1D2C043DC600581412 /* FirebaseType.swift */,
-				FCD4AA172C043B6C00581412 /* AuthPresenter.swift */,
-				FCD4AA0F2C043AC400581412 /* CustomTextView.swift */,
-				FCD4AA022C0435FC00581412 /* ForgotPasswordProtocol.swift */,
-				FCD4AA132C043B1D00581412 /* Extension+ViewController.swift */,
-				FCD4AA0B2C04389400581412 /* ForgotPasswordRouter.swift */,
-				FCD4AA042C04360E00581412 /* ForgotPasswordPresenter.swift */,
-				FCD4AA082C04385A00581412 /* ForgotPasswordViewController.swift */,
-				FCD4AA062C04368400581412 /* ForgotPasswordInteractor.swift */,
 				FCD4A9BB2C042F0F00581412 /* Main.storyboard */,
 				FCD4A9C12C042F1100581412 /* Assets.xcassets */,
 				FCD4A9C32C042F1100581412 /* LaunchScreen.storyboard */,
@@ -537,7 +617,7 @@
 				FCD4AA162C043B4800581412 /* CustomError.swift in Sources */,
 				FCD4AA242C04455600581412 /* Extension+NotificationName.swift in Sources */,
 				FCD4AA282C044B9300581412 /* UserTableViewCell.swift in Sources */,
-				FCD4A9BA2C042F0F00581412 /* ViewController.swift in Sources */,
+				FCD4A9BA2C042F0F00581412 /* HomeViewController.swift in Sources */,
 				FCD4A9B62C042F0F00581412 /* AppDelegate.swift in Sources */,
 				FCD4AA322C04571500581412 /* HomeRouter.swift in Sources */,
 				FCD4A9EB2C042F2D00581412 /* HomeInteractor.swift in Sources */,

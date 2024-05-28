@@ -33,10 +33,10 @@ extension UIImage {
     }
     
     func calculateSizeInKB() -> Int {
-            if let imageData = jpegData(compressionQuality: 1.0) {
-                let kilobytes = imageData.count / 1024
-                return kilobytes
-            }
-            return 0
+        if let imageData = jpegData(compressionQuality: 1.0) {
+            let kilobytes = imageData.count / 1024
+            return kilobytes
         }
+        return 0
+    }
 }
