@@ -12,11 +12,7 @@ class SessionManager{
     static var shared = SessionManager()
     
     internal func request<T: Decodable>(req: RequestProtocol, data: Data?, queryItems: [URLQueryItem], completion: @escaping((Result<T, Error>) -> Void)){
-        var components = URLComponents()
-        components.queryItems = queryItems
-        components.path = URLManager.baseUrl.url + req.path.url
-        components.scheme = "https"
-        guard let url = URL(string: "http://\(URLManager.baseUrl.url + req.path.url)")else{completion(.failure(CustomError.callApiFailBecauseURLNotFound));return}
+        guard let url = URL(string: "https://\(URLManager.baseUrl.url + req.path.url)")else{completion(.failure(CustomError.callApiFailBecauseURLNotFound));return}
         print("error: \(url.absoluteString)")
         var request = URLRequest(url: url)
         request.httpMethod = req.method.rawValue
@@ -56,7 +52,7 @@ enum URLManager{
     var url: String{
         switch self{
         case .baseUrl:
-            return "localhost:3000/"
+            return "serverfanintergrasi.adaptable.app/"
         case .fetchUsers:
             return "fetchUsers"
         }
