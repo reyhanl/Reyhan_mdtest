@@ -52,6 +52,9 @@
 		FCD4AA362C045E3400581412 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCD4AA352C045E3300581412 /* GoogleService-Info.plist */; };
 		FCD4AA3A2C045E4400581412 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCD4AA392C045E4400581412 /* GoogleService-Info.plist */; };
 		FCD4AA3C2C04813400581412 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA3B2C04813400581412 /* ProfileView.swift */; };
+		FCD4AA3E2C05B1A800581412 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA3D2C05B1A800581412 /* SessionManager.swift */; };
+		FCD4AA402C05B1DE00581412 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA3F2C05B1DE00581412 /* Request.swift */; };
+		FCD4AA422C05B28F00581412 /* UserDefaultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD4AA412C05B28F00581412 /* UserDefaultModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +130,9 @@
 		FCD4AA352C045E3300581412 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCD4AA392C045E4400581412 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCD4AA3B2C04813400581412 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FCD4AA3D2C05B1A800581412 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		FCD4AA3F2C05B1DE00581412 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		FCD4AA412C05B28F00581412 /* UserDefaultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +218,8 @@
 				FCD4AA0D2C043A9000581412 /* CustomButton.swift */,
 				FCD4AA212C04449D00581412 /* Extension+String.swift */,
 				FCD4A9B92C042F0F00581412 /* ViewController.swift */,
+				FCD4AA3D2C05B1A800581412 /* SessionManager.swift */,
+				FCD4AA3F2C05B1DE00581412 /* Request.swift */,
 				FCD4AA3B2C04813400581412 /* ProfileView.swift */,
 				FCD4AA272C044B9300581412 /* UserTableViewCell.swift */,
 				FCD4A9E82C042F2200581412 /* HomePresenter.swift */,
@@ -221,6 +229,7 @@
 				FCD4AA352C045E3300581412 /* GoogleService-Info.plist */,
 				FCD4A9EC2C042F3C00581412 /* HomeProtocol.swift */,
 				FCD4A9EA2C042F2D00581412 /* HomeInteractor.swift */,
+				FCD4AA412C05B28F00581412 /* UserDefaultModel.swift */,
 				FCD4AA392C045E4400581412 /* GoogleService-Info.plist */,
 				FCD4AA112C043AE500581412 /* Extension+UIColor.swift */,
 				FCD4AA252C0445E600581412 /* UserDefaultHelper.swift */,
@@ -524,6 +533,7 @@
 				FCD4AA202C043DF700581412 /* UserProfileModel.swift in Sources */,
 				FCD4AA302C0456CF00581412 /* AuthRouter.swift in Sources */,
 				FCD4A9C02C042F0F00581412 /* TestFanInteraksi.xcdatamodeld in Sources */,
+				FCD4AA3E2C05B1A800581412 /* SessionManager.swift in Sources */,
 				FCD4AA162C043B4800581412 /* CustomError.swift in Sources */,
 				FCD4AA242C04455600581412 /* Extension+NotificationName.swift in Sources */,
 				FCD4AA282C044B9300581412 /* UserTableViewCell.swift in Sources */,
@@ -537,8 +547,10 @@
 				FCD4AA122C043AE500581412 /* Extension+UIColor.swift in Sources */,
 				FCD4AA0C2C04389400581412 /* ForgotPasswordRouter.swift in Sources */,
 				FCD4AA092C04385A00581412 /* ForgotPasswordViewController.swift in Sources */,
+				FCD4AA422C05B28F00581412 /* UserDefaultModel.swift in Sources */,
 				FCD4A9F12C042FC500581412 /* AuthViewController.swift in Sources */,
 				FCD4A9B82C042F0F00581412 /* SceneDelegate.swift in Sources */,
+				FCD4AA402C05B1DE00581412 /* Request.swift in Sources */,
 				FCD4AA3C2C04813400581412 /* ProfileView.swift in Sources */,
 				FCD4AA0E2C043A9000581412 /* CustomButton.swift in Sources */,
 			);

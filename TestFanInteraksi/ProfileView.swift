@@ -40,7 +40,7 @@ class ProfileView: UIView{
     
     func setupView(profile: UserProfileModel){
         nameLabel.text = profile.name
-        verificationLabel.text = (Auth.auth().currentUser?.isEmailVerified ?? false) ? "Verified":"Not Verify"
+        verificationLabel.text = (profile.isVerified ?? false) ? "Verified":"Not Verify"
     }
     
     func addStackView(){

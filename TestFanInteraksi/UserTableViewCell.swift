@@ -11,6 +11,7 @@ class UserTableViewCell: UITableViewCell{
     lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
         return stackView
     }()
     lazy var emailLabel: UILabel = {
@@ -65,13 +66,13 @@ class UserTableViewCell: UITableViewCell{
         
         NSLayoutConstraint.activate([
             NSLayoutConstraint(item: verificationlabel, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: verificationlabel, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: 10),
+            NSLayoutConstraint(item: verificationlabel, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1, constant: -10),
             NSLayoutConstraint(item: verificationlabel, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 0.5, constant: 0)
         ])
     }
     
     func setupCell(user: UserProfileModel){
-        self.emailLabel.text = user.name
+        self.emailLabel.text = user.email
         self.nameLabel.text = user.name
         self.verificationlabel.text = (user.isVerified ?? false) ? "verified":"not verified"
     }

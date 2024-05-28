@@ -17,12 +17,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 //        try? Auth.auth().signOut()    
         addAuthStateListener(scene: windowScene)
-        redirectUser(scene: windowScene)
     }
     
     func addAuthStateListener(scene: UIWindowScene){
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.AuthStateDidChange, object: Auth.auth(), queue: nil) { _ in
-            self.redirectUser(scene: scene)
+        Auth.auth().addStateDidChangeListener { [weak self] auth, user in
+            self?.redirectUser(scene: scene)
         }
     }
     
@@ -42,7 +41,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             if self.firstOpen{
                 self.goToRegister(scene: scene)
             }else{
-//                self.presentSignInInvalid(scene: scene)
+                self.goToRegister(scene: scene)
             }
         }
         self.firstOpen = false
@@ -57,11 +56,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func goToHome(scene: UIWindowScene){
-        let vc = HomeRouter.makeComponent()
-        let navigationController = CustomNavigationController(rootViewController: vc)
-        window = UIWindow(windowScene: scene)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
+        DispatchQueue.main.async {
+            let vc = HomeRouter.makeComponent()
+            let navigationController = CustomNavigationController(rootViewController: vc)
+            self.window = UIWindow(windowScene: scene)
+            self.window?.rootViewController = navigationController
+            self.window?.makeKeyAndVisible()
+        }
     }
     
 

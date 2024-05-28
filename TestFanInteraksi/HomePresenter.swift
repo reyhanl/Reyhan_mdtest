@@ -21,15 +21,13 @@ class HomePresenter: HomePresenterProtocol{
     func viewDidLoad(){
         finishFetchingProfile = false
         finishFetchingProfiles = false
-        interactor?.fetchFetchUserData()
-        interactor?.fetchUsersList()
+        interactor?.fetchData()
     }
     
     func userRefreshData(){
         finishFetchingProfile = false
         finishFetchingProfiles = false
-        interactor?.fetchFetchUserData()
-        interactor?.fetchUsersList()
+        interactor?.fetchData()
     }
     
     func result(result: Result<HomeSuccessType, Error>){
@@ -51,7 +49,9 @@ class HomePresenter: HomePresenterProtocol{
             finishFetchingProfile = true
             view?.updateTableView()
         case .successfullyFetchedProfiles(let profiles):
+            self.listOfProfile = profiles
             finishFetchingProfiles = true
+            view?.updateTableView()
             break
         }
     }
@@ -65,6 +65,10 @@ class HomePresenter: HomePresenterProtocol{
         default:
             print("error: \(error.localizedDescription)")
         }
+    }
+    
+    func signOut() {
+        interactor?.signOut()
     }
     
     func numberOfRows() -> Int {

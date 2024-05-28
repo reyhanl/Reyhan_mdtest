@@ -37,6 +37,13 @@ extension UIColor{
     }
     
     static var isDarkMode: Bool{
+        if let window = UIApplication.shared.windows.first {
+            if window.traitCollection.userInterfaceStyle == .dark {
+                return true
+            } else {
+                return false
+            }
+        }
         return true
     }
     

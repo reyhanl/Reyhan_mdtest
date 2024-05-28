@@ -28,14 +28,15 @@ protocol HomePresenterProtocol{
     func numberOfRows() -> Int
     func getProfile() -> UserProfileModel?
     func profile(at index: Int) -> UserProfileModel
+    func signOut()
 }
 
 protocol HomeInteractorProtocol{
     
     var presenter: HomePresenterProtocol?{get set}
     
-    func fetchFetchUserData()
-    func fetchUsersList()
+    func fetchData()
+    func signOut()
 }
 
 enum HomeSuccessType{
