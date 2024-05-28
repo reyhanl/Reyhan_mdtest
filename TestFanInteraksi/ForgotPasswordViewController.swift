@@ -60,6 +60,7 @@ class ForgotPasswordViewController: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         addContainer()
         addStackView()
         addEmailTextField()

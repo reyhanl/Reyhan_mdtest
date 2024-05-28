@@ -23,6 +23,7 @@ class HomeViewController: UIViewController, HomeViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         presenter?.viewDidLoad()
         addTableView()
         addSignOutButton()
